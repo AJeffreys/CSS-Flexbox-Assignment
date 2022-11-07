@@ -6,6 +6,8 @@
 @media (max-width:800px){
 	#container {width:90%;
 				margin:0 auto;}}
+
+.ui-menu { width: 150px; }
 	
 
 .flex-container {
