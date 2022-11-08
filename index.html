@@ -7,13 +7,22 @@
 	
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   	<link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  	<script>
-  	$( function() {
-    $( "#menu" ).menu();
-  	} );
-  	</script>
+      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#speed" ).selectmenu();
+ 
+    $( "#files" ).selectmenu();
+ 
+    $( "#number" )
+      .selectmenu()
+      .selectmenu( "menuWidget" )
+        .addClass( "overflow" );
+ 
+    $( "#salutation" ).selectmenu();
+  } );
+  </script>
 </head>
 	
 
@@ -28,13 +37,18 @@
 	<div class="navbar">
   		<a href="#">Home</a>
   		<a href="#">Albums</a>
-			    <ul id="menu" >
-      				<li><div>different</div></li>
-      				<li><div>albums</div></li>
-      				<li><div>go here</div></li>
-    			</ul>
   		<a href="#">About</a>
   		<a href="#">Contact</a>
+			 <fieldset>
+    				<label for="speed">Select a speed</label>
+    				<select name="speed" id="speed">
+      				<option>Slower</option>
+      				<option>Slow</option>
+      				<option selected="selected">Medium</option>
+      				<option>Fast</option>
+      				<option>Faster</option>
+    				</select>
+				</fieldset>
 	</div>
 	
 	<div class="row">
